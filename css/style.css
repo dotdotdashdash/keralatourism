@@ -20,12 +20,11 @@
 #navbarDropdown::after {        /* Remove the arrow after button */
     content: none;
 }
-/* 
+
 .maintxt {
-    background-image: url(../images/pic-dt-1.jpg);
     background-size: cover;
     height: 14rem;
-} */
+}
 
 .hov:hover {
     opacity: 0.6 ;
