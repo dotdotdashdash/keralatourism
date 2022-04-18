@@ -62,9 +62,9 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 21%;
+    left: 19%;
     margin-left: -5px;
-    border-width: 7px;
+    border-width: 8px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
@@ -99,9 +99,9 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 21%;
+    left: 26%;
     margin-left: -5px;
-    border-width: 7px;
+    border-width: 8px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
