@@ -22,18 +22,27 @@ function mobilePopuphide() {
     mobilePopup.style.visibility = "hidden";
 }
 
+function showPassword() {
+    let userPass = document.getElementById("userPass");
+    if (userPass.type === "password") {
+        userPass.type = "text";
+    } else {
+        userPass.type = "password";
+    }
+}
+
 
 // Sign Up form validations----------------------------------------------------------------------
 
 const form = document.getElementById("signupform");
 
 form.addEventListener('submit', function(Event) {
-    let mailFlag = validateMail();
-    let mobileFlag = validateMobile();
-    let pwdFlag = validatepwd();
-    let pwdStrengthFlag = pwdStrength();
+    // let mailFlag = validateMail();
+    // let mobileFlag = validateMobile();
+    // let pwdFlag = validatepwd();
+    // let pwdStrengthFlag = pwdStrength();
 
-    if (!mailFlag || !mobileFlag || !pwdFlag || !pwdStrengthFlag) {
+    if (!validateMail() || !validateMobile() || !validatepwd() || !pwdStrength()) {
         Event.preventDefault();
     }
 })
@@ -72,18 +81,6 @@ function validatepwd() {
     pwdrpt.classList.remove("border", "border-danger");     //remove red border
     pwdrpt.setCustomValidity('');
     return true;
-}
-
-function tick() {
-    let pwd = document.getElementById("userPass");
-    let pwdrpt = document.getElementById("userPassRepeat");
-    let verified = document.getElementById("verified");
-
-    if ((pwd.value == pwdrpt.value) && (pwd.value != "")) {
-        verified.style.visibility = "visible";
-    } else {
-        verified.style.visibility = "hidden";
-    }
 }
 
 function validateMobile() {
@@ -194,6 +191,18 @@ function pwdStrength() {
         pb3.setAttribute("style", "width: 50%");
         strengthValue.innerText = "Strong";
         return true;
+    }
+}
+
+function tick() {
+    let pwd = document.getElementById("userPass");
+    let pwdrpt = document.getElementById("userPassRepeat");
+    let verified = document.getElementById("verified");
+
+    if ((pwd.value == pwdrpt.value) && (pwd.value != "")) {
+        verified.style.visibility = "visible";
+    } else {
+        verified.style.visibility = "hidden";
     }
 }
 

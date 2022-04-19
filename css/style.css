@@ -132,3 +132,10 @@
     font-size: large;
     visibility: hidden;
 }
+
+#viewPass {
+    float: right;
+    margin-right: 2%;
+    margin-top: -25px;
+    position: relative;
+}
