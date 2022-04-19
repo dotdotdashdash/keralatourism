@@ -199,7 +199,7 @@ function tick() {
     let pwdrpt = document.getElementById("userPassRepeat");
     let verified = document.getElementById("verified");
 
-    if ((pwd.value == pwdrpt.value) && (pwd.value != "")) {
+    if ((pwd.value == pwdrpt.value) && (pwd.value != "") && pwdStrength()) {
         verified.style.visibility = "visible";
     } else {
         verified.style.visibility = "hidden";
