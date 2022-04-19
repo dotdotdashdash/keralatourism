@@ -102,10 +102,12 @@ function validateMobile() {
 
 function pwdStrength() {
     let pwdValue = document.getElementById("userPass");
+    let strengthValue = document.getElementById("strengthValue");
+
     let pb1 = document.getElementById("pb1");
     let pb2 = document.getElementById("pb2");
     let pb3 = document.getElementById("pb3");
-    let strengthValue = document.getElementById("strengthValue");
+
     let pwdli1 = document.getElementById("pwdli1");
     let pwdli2 = document.getElementById("pwdli2");
     let pwdli3 = document.getElementById("pwdli3");
@@ -178,14 +180,15 @@ function pwdStrength() {
         pwdli4.classList.remove("greenTick");
     }
 
-    // console.log(pwdValue.value, strCount, pwdValue.value.length);
+    // console.log(`Password:${pwdValue.value}\nstrCount: ${strCount}\nPassword Length: ${pwdValue.value.length}` );
 
-    if(strCount >= 3) {
+    if (strCount < 4) {
+        pb2.removeAttribute("style");
+    } else if (strCount >= 4) {
         pb2.setAttribute("style", "width: 30%");
         pb3.removeAttribute("style");
         strengthValue.innerText = "Medium";
     }
-
     if (strCount >= 5) {
         pb2.setAttribute("style", "width: 30%");
         pb3.setAttribute("style", "width: 50%");
@@ -193,6 +196,7 @@ function pwdStrength() {
         return true;
     }
 }
+
 
 function tick() {
     let pwd = document.getElementById("userPass");
