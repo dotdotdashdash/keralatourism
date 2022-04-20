@@ -24,17 +24,16 @@ function mobilePopuphide() {
     mobilePopup.style.visibility = "hidden";
 }
 
-// View Password toggle
+// Show / Hide Password
 
 function showPassword() {
     let userPass = document.getElementById("userPass");
-    if (userPass.type === "password") {
+    if ((userPass.type === "password") && !(userPass.value == "")) {
         userPass.type = "text";
     } else {
         userPass.type = "password";
     }
 }
-
 
 // -------------------Sign Up form validations-------------------
 
@@ -63,7 +62,6 @@ function validateMail() {
         eMail.reportValidity();  
         return false;
     }
-
 }
 
 // Password Validation
@@ -102,7 +100,6 @@ function validateMobile() {
     mobileNumber.setCustomValidity('Invalid Mobile Number'); 
     mobileNumber.reportValidity();  
     return false;
-    
 }
 
 // Password Strength Check & Dynamic Styling of Strength Progress Bar
@@ -124,7 +121,7 @@ function pwdStrength() {
     let pwdLowerRegex = /[a-z]/g;
     let pwdNumRegex = /[0-9]/g;
 
-    let strCount = 0
+    let strCount = 0;
 
     if(pwdValue.value == "") {
         pb1.removeAttribute("style");
