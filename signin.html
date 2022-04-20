@@ -17,7 +17,7 @@
 
     <body>
 
-<!-- Nav Bar -->
+        <!-------------Nav Bar----------- -->
 
         <header class="sticky-top ">
             <nav class="navbar navbar-expand-lg navbar-light bg-dark  bg-gradient border rounded ">
@@ -74,15 +74,15 @@
                 <form class="d-flex">
                     <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light me-3" type="submit">Search</button>                
-                  </form>
-                  <br>  
-                  <!-- <span class="me-3 btn border border-light text-light fw-bold " id="date-div"></span> -->
-                  
-                  <div class="btn-group d-flex justify-content-center">
-                      <a href="signin.html" class="btn btn-primary me-1 my-2">Sign In</a>
-                      <a href="signup.html" class="btn btn-primary my-2">Sign Up</a>
-                  </div>
-                  
+                </form>
+                <br>  
+                <!-- <span class="me-3 btn border border-light text-light fw-bold " id="date-div"></span> -->
+                
+                <div class="btn-group d-flex justify-content-center">
+                    <a href="signin.html" class="btn btn-primary me-1 my-2">Sign In</a>
+                    <a href="signup.html" class="btn btn-primary my-2">Sign Up</a>
+                </div>
+                
                     
                     
                     <!-- <button type="button" class="btn btn-primary me-2"">Sign Up</button> -->
@@ -103,13 +103,11 @@
             </ol>      
 
         </nav>  
-<!--/Nav Bar  -->
 
-<!-- ----------------------------------------------------------------------------------------------- -->
-
+        <!-- -----------/Nav Bar----------- -->
 
 
-<!-- Sign In -->
+        <!-- -------------Sign In------------- -->
 
         <div>
 
@@ -122,32 +120,32 @@
                 </div>
                 
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 bg-gradient rounded align-self-center p-4 ">
-                <form>
+                
+                <form action="signup.html " id="signinform" > 
                     
-        
                     <div class="divider d-flex align-items-center my-4">
                     <p class="text-center fw-bold  mb-0"><h2>Log In</h2></p>
                     </div>
         
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                    <input type="email" id="form3Example3" class="form-control form-control-lg"
-                        placeholder="Enter a valid email address" />
-                    <label class="form-label" for="form3Example3">Email address</label>
+                        <label class="form-label" for="userEmail">Email address</label>
+                        <input oninput="setCustomValidity('')" required type="email" id="userEmail" class="form-control form-control-lg"
+                        placeholder="Enter your email address" />
                     </div>
         
                     <!-- Password input -->
                     <div class="form-outline mb-3">
-                    <input type="password" id="form3Example4" class="form-control form-control-lg"
-                        placeholder="Enter password" />
-                    <label class="form-label" for="form3Example4">Password</label>
+                        <label class="form-label" for="userPass">Password</label>
+                        <input required type="password" id="userPass" class="form-control form-control-lg"
+                        placeholder="Enter your password" />
                     </div>
         
                     <div class="d-flex justify-content-between align-items-center">
                     <!-- Checkbox -->
                     <div class="form-check mb-0">
-                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                        <label class="form-check-label" for="form2Example3">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="rememberCheck" />
+                        <label class="form-check-label" for="rememberCheck">
                         Remember me
                         </label>
                     </div>
@@ -155,36 +153,29 @@
                     </div>
         
                     <div class="text-center text-lg-start mt-4 pt-2">
-                    <button type="button" class="btn btn-primary btn-lg border border-dark"
-                        style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                    <button type="submit" class="btn btn-primary btn-lg border border-dark" style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
                     <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="signup.html"
                         class="link-danger">Sign Up</a></p>
                     </div>
         
                 </form>
+
                 </div>
             </div>
-            </div>
-           
-           
-            
+            </div>  
+        
         </section>
 
-    </div>
+        </div>
 
 
-<!-- Sign In -->
+        <!-- -------------/Sign In------------- -->
 
 
+        <!-- -------------Footer------------- -->
 
-
-
-
-
-<!-- ------------------------------------------------------------------------------------------------ -->
-<!-- Footer  -->
-
-    <div>
+        <div>
+            
         <footer class="bg-dark bg-gradient text-center text-white ">
 
             <!-- Grid container -->
@@ -228,25 +219,27 @@
             <!-- Copyright -->
         </footer>
 
-    </div>
-<!-- Footer  -->
+        </div>
+
+        <!-- -------------/Footer------------- -->
 
 
+        <script type="text/javascript">
+            const dateDiv = document.getElementById('date-div');
 
+            function myDateFunction() {
+                const now = new Date();
+                const nowStr = now.toLocaleTimeString('en-US');
+                dateDiv.innerHTML = nowStr;
+            }
 
+            setInterval(myDateFunction, 1000);
+        </script>
 
-  <script type="text/javascript">
-    const dateDiv = document.getElementById('date-div');
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    function myDateFunction() {
-        const now = new Date();
-        const nowStr = now.toLocaleTimeString('en-US');
-        dateDiv.innerHTML = nowStr;
-    }
-
-    setInterval(myDateFunction, 1000);
-  </script>
-
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="./js/signin-validation-script.js"></script>
+    
     </body>
+
 </html>

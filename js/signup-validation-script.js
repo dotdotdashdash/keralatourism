@@ -1,3 +1,5 @@
+// Popups for displaying allowed formats for Mobile Number and Password
+
 // Password Popup toggle
 
 function show() {
@@ -22,6 +24,8 @@ function mobilePopuphide() {
     mobilePopup.style.visibility = "hidden";
 }
 
+// View Password toggle
+
 function showPassword() {
     let userPass = document.getElementById("userPass");
     if (userPass.type === "password") {
@@ -32,20 +36,19 @@ function showPassword() {
 }
 
 
-// Sign Up form validations----------------------------------------------------------------------
+// -------------------Sign Up form validations-------------------
 
-const form = document.getElementById("signupform");
+// Event Listener
 
-form.addEventListener('submit', function(Event) {
-    // let mailFlag = validateMail();
-    // let mobileFlag = validateMobile();
-    // let pwdFlag = validatepwd();
-    // let pwdStrengthFlag = pwdStrength();
+const signupform = document.getElementById("signupform");
 
+signupform.addEventListener('submit', function(Event) {    
     if (!validateMail() || !validateMobile() || !validatepwd() || !pwdStrength()) {
         Event.preventDefault();
     }
 })
+
+// Mail Validation
 
 function validateMail() {
     let eMail = document.getElementById("userEmail");
@@ -62,6 +65,8 @@ function validateMail() {
     }
 
 }
+
+// Password Validation
 
 function validatepwd() {
     let pwd = document.getElementById("userPass");
@@ -83,6 +88,8 @@ function validatepwd() {
     return true;
 }
 
+// Mobile Number Valdation
+
 function validateMobile() {
     let mobileNumber = document.getElementById("userMobile");    
     let regexMob = /^\d{3}[\.\-\s]?\d{3}[\.\-\s]?\d{4}$/;
@@ -98,7 +105,7 @@ function validateMobile() {
     
 }
 
-// Password Strength Check
+// Password Strength Check & Dynamic Styling of Strength Progress Bar
 
 function pwdStrength() {
     let pwdValue = document.getElementById("userPass");
@@ -197,6 +204,7 @@ function pwdStrength() {
     }
 }
 
+// Tick mark for matching passwords
 
 function tick() {
     let pwd = document.getElementById("userPass");
@@ -210,4 +218,4 @@ function tick() {
     }
 }
 
-//----------------------------------------------------------------------------------------------------------
+// -------------------Sign Up Form Validations End-------------------
