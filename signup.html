@@ -131,7 +131,7 @@
                         </div>
 
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="userMobile">Mobile Number</label>
+                            <label onmouseover="mobilePopupshow()" onmouseout="mobilePopuphide()" class="form-label" for="userMobile">Mobile Number</label>
                             <div class="mobPopup p-0">
                                 <i class="fa-solid fa-circle-info" onmouseover="mobilePopupshow()" onmouseout="mobilePopuphide()"></i>
                                 <span class="popuptext " id="mobilePopup">Use one of these formats:&nbsp;<br> 
@@ -151,9 +151,9 @@
             
                                 <div class="form-outline mb-4">                                 
                                     
-                                    <label title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="form-label" for="userPass" >Password&nbsp; </label>
+                                    <label onmouseover="pwdPopupShow()" onmouseout="pwdpopupHide()"class="form-label" for="userPass" >Password&nbsp; </label>
                                     <!-- info button -->
-                                    <div class="popup"><i class="fa-solid fa-circle-info" onmouseover="show()" onmouseout="hide()"></i>
+                                    <div class="popup"><i class="fa-solid fa-circle-info" onmouseover="pwdPopupShow()" onmouseout="pwdpopupHide()"></i>
                                         <span class="popuptext" id="pwdPopup">Requirements:&nbsp;<br> 
                                             <ul>
                                                 <li id="pwdli1">At least one uppercase character</li>

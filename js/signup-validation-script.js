@@ -2,12 +2,12 @@
 
 // Password Popup toggle
 
-function show() {
+function pwdPopupShow() {
     var popup = document.getElementById("pwdPopup");
     popup.style.visibility = "visible";
 }
 
-function hide() {
+function pwdpopupHide() {
     var popup = document.getElementById("pwdPopup");
     popup.style.visibility = "hidden";
 }
