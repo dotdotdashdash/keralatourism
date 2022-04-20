@@ -3,8 +3,12 @@
 function showPassword() {
     let userPass = document.getElementById("userPass");
     if ((userPass.type === "password") && !(userPass.value == "")) {
+        viewPass.classList.remove("fa-eye");
+        viewPass.classList.add("fa-eye-slash");
         userPass.type = "text";
     } else {
+        viewPass.classList.remove("fa-eye-slash");
+        viewPass.classList.add("fa-eye");
         userPass.type = "password";
     }
 }
@@ -48,10 +52,12 @@ function validatepwd() {
     if (!pwdStrength()) {
         pwd.setCustomValidity("You're not matching the valid password format."); 
         pwd.reportValidity();
+        pwd.classList.add("border", "border-danger");
         return false;
     }
     else {
         pwd.setCustomValidity("");
+        pwd.classList.remove("border", "border-danger");
         return true;
     }
 }

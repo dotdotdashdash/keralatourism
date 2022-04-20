@@ -28,9 +28,14 @@ function mobilePopuphide() {
 
 function showPassword() {
     let userPass = document.getElementById("userPass");
+    let viewPass = document.getElementById("viewPass");
     if ((userPass.type === "password") && !(userPass.value == "")) {
+        viewPass.classList.remove("fa-eye");
+        viewPass.classList.add("fa-eye-slash");
         userPass.type = "text";
     } else {
+        viewPass.classList.remove("fa-eye-slash");
+        viewPass.classList.add("fa-eye");
         userPass.type = "password";
     }
 }
