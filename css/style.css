@@ -26,10 +26,28 @@
     height: 14rem;
 }
 
-.hov:hover {
-    opacity: 0.6 ;
-    border: 4px solid black;
+.hov-in:hover {
+    
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0.75 ; 
+    border: 2px solid #842029;
+    transition: .3s ease-in-out;
+    border-radius: 5px;
 }
+
+.hov:hover {
+    
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    /* opacity: 0.75 ;  */
+    border: 2px solid #842029;
+    transition: .2s ease-in-out;
+    border-radius: 5px;
+}
+
 
 /* Popup container */
 .popup {
