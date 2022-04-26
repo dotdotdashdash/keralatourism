@@ -65,7 +65,7 @@
     font-size: smaller;
     line-height: 1rem;
     border-radius: 5px;
-    border: 3px solid #59359a;
+    /* border: 2px solid rgb(11, 245, 11);  */
     padding: 0.5rem 0.5rem 0 0.8rem ;
     position: absolute;
     z-index: 1;
@@ -80,9 +80,9 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 19%;
+    left: 20.5%;
     margin-left: -5px;
-    border-width: 8px;
+    border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
@@ -100,10 +100,10 @@
     padding: 0.5rem 0.5rem 0 0.8rem ;
     position: absolute;
     z-index: 1;
-    bottom: 2rem;
+    bottom: 1.7rem;
     left: 1.7rem;
     margin-left: -5rem;
-    border: 3px solid #59359a;
+    /* border: 2px solid rgb(11, 245, 11);  */
     opacity: 0.85;
 }
 
@@ -117,9 +117,9 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 25.5%;
+    left: 27%;
     margin-left: -5px;
-    border-width: 8px;
+    border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
@@ -145,7 +145,7 @@
 }
 
 .checkSymbol {
-    color: rgb(0, 199, 0); 
+    color: rgb(8, 150, 8); 
     font-weight: 900;
     font-size: large;
     visibility: hidden;
@@ -155,5 +155,12 @@
     float: right;
     margin-right: 3%;
     margin-top: -25px;    
+    position: relative;
+}
+
+#verified {
+    float: right;
+    margin-right: 3%;
+    margin-top: -32px;    
     position: relative;
 }
